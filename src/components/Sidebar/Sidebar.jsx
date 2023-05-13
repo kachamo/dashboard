@@ -1,52 +1,46 @@
-
+import css from './Sidebar.module.css';
 import { MdSpaceDashboard } from "react-icons/md";
-import { BsTable, BsFillCalendarCheckFill} from "react-icons/bs";
+import { AiFillCalendar, AiOutlineTable } from "react-icons/ai";
 import { FaTasks } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
-import css from "./Sidebar.module.css";
-
 const Sidebar = () => {
-  return (
-        <div className={css.container}>        
-    
-    <img src="./logo.png" alt="logo"  className={css.logo}/>
-        <div className={css.menu}>
-            <NavLink to="dashboard" className={css.item} title={"Dashboard"}>
+    return (
+        <div className={css.container}>
+
+            <div className={css.logo}>Kac.</div>
+
+
+            <div className={css.menu}>
+                <NavLink to="dashboard" className={css.item} title={"Dashboard"}>
+                    <MdSpaceDashboard size={30} />
+                </NavLink>
                 
-                <MdSpaceDashboard size={30}/>
-            </NavLink>
-
-            <NavLink 
-                    to="calender"
+                <NavLink
+                    to="calendar"
                     className={css.item}
-                    title='Calender'>
+                    title="Calendar"
+                >
+                    <AiFillCalendar size={30} />
+                </NavLink>
 
-                <BsFillCalendarCheckFill size={30}/>
-            </NavLink>
-            
-            <NavLink
-                to="board"
-                className={css.item}
-                title='Trello Board'>
+                <NavLink
+                    to="board"
+                    className={css.item}
+                    title="Trello Board"
+                >
+                    <FaTasks size={30} />
+                </NavLink>
 
-                <FaTasks size={30}/>
-            </NavLink>
-
-            <NavLink 
-                to="users"
-                className={css.item}
-                title='Users'>
-                    
-                    <BsTable size={30}/>
-            </NavLink>
+                <NavLink
+                    to="users"
+                    className={css.item}
+                    title="Users"
+                >
+                    <AiOutlineTable size={30} />
+                </NavLink>
+            </div>
         </div>
-
-    </div>
-
-  )
-  
-
-        
+    )
 }
 
 export default Sidebar

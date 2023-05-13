@@ -7,7 +7,6 @@ const Orders = () => {
     return (
         <div className={`${css.container} theme-container`}>
             <div className={css.head}>
-                <img src="./logo.png" alt="logo" />
                 <span>Orders today</span>
             </div>
 

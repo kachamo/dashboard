@@ -38,7 +38,10 @@ const StatisticsChart = () => {
             {
                 type: "value",
                 splitLine: {
-                    show: false,
+                    show: true,
+                    lineStyle: {
+                        color: "rgba(41, 41, 41)"
+                    }
                 }
             }
         ],
@@ -50,33 +53,22 @@ const StatisticsChart = () => {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                         {
                             offset: 0,
-                            color: "rgb(255, 191, 0)",
+                            color: "rgb(41, 41, 41)",
                         },
-                        {
-                            offset: 1,
-                            color: "#F450D3"
-                        }
                     ]),
                     width: 4
-                },
-                areaStyle: {
-                    opacity: .5,
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 0.8, [
-                        {
-                            offset: 0,
-                            color: "#FE4C00"
-                        },
-                        {
-                            offset: 1,
-                            color: "rgba(255,144,70,0.1)"
-                        }
-                    ])
                 },
                 emphasis: {
                     focus: "series",
                 },
-                showSymbol: false,
-                data: [28000, 19000, 32000, 18000, 41000, 30000, 26000]
+                showSymbol: true,
+                symbolSize: 20,
+                color: "rgb(255, 255, 255)",
+                borderType: "solid",
+                borderColor: "rgb(41, 41, 41)",
+                borderWidth: 100,
+                
+                data: [10000, 20000, 18000, 30000, 15000, 30000, 26000 ]
             }
         ]
     }

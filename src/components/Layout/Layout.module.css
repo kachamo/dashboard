@@ -1,24 +1,29 @@
-.container{
-    display: flex;
+.container {
+  display: flex;
 }
-.dashboard{
-    position: relative;
-    width: 100%;
-    z-index: 0;
+
+.dashboard {
+  position: relative;
+  width: 100%;
+  z-index: 0;
 }
-.topBaseGradients{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 20rem;
-    overflow: hidden;
-    z-index: -1;
+
+.topBaseGradients {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40rem;
+  overflow: hidden;
+  z-index: -1;
 }
-.topBaseGradients>:nth-child(2){
+
+.topBaseGradients>:nth-child(2)
+{
     left: 40%;
 }
-.topBaseGradients>:nth-child(3){
+.topBaseGradients>:nth-child(3)
+{
     right: 0;
 }
 .header{
@@ -27,57 +32,68 @@
     align-items: center;
     justify-content: space-between;
 }
-.header>:nth-child(1){
+.header>:nth-child(1)
+{
     font-size: 1.2rem;
 }
- .searchBar{
-    background-color: rgba(255, 255, 255, 0.496);
+.searchBar{
+    background-color: rgba(0, 0, 0, 0.363);
     width: 30%;
     max-width: 25rem;
-    padding: 1rem 1rem;
-    border-radius: 8px;
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
     height: 2rem;
     display: flex;
     align-items: center;
-    border: 2px solid rgb(63, 60, 63);
+    border: none;
     justify-content: center;
     gap: 8px;
- }
- .searchBar>input{
+}
+
+.searchBar>input{
     background: transparent;
-    color: #fff;
+    color: white;
     outline: none;
     border: none;
-    padding: 0;
-    width: 100%;
- }
- .profile{
+    padding: 0;width: 100%;
+}
+.profile{
     display: flex;
     gap: 1rem;
     align-items: center;
     justify-content: center;
- }
- .profile>img{
+}
+
+.profile>img{
     height: 50px;
     width: 50px;
- }
- .details{
+}
+.details{
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
- }
- .details>:nth-child(1){
-    font-size: 1rem;
+    gap: 0.2rem;
+}
+
+.details>:nth-child(1)
+{
+    font-size: 1.1rem;
     font-weight: bold;
- }
- .content{
+}
+.details>:nth-child(2)
+{
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+.content{
     margin: auto;
     display: flex;
     height: 100%;
     align-items: center;
+    /* uncomment the aic, and make mt -4rem */
     margin-top: -4rem;
- }
- .content>div{
+}
+.content>div{
     width: 100%;
-    min-width: 75vh;
- }
+    min-width: 75vh
+}
+
